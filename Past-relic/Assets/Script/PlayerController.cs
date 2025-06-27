@@ -76,6 +76,7 @@ public float throwForce = 3f;
     }
      void TryPickUp()
     {
+        
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
         {

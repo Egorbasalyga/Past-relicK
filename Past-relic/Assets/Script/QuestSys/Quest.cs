@@ -16,7 +16,7 @@ public List<string> quest;
     // Update is called once per frame
     void Update()
     {
-
+        
         if(UrlText.text != quest[id]){
             UrlText.text = quest[id];
         }
