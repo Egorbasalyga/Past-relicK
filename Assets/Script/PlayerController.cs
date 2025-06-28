@@ -13,7 +13,7 @@ private bool wasTriggerPressedLastFrame = false;
 public Transform holdPosition;
     public float interactDistance = 3f;
 public float throwForce = 3f;
-    private GameObject heldObject;
+    private GameObject heldObject = null;
     private Rigidbody heldRigidbody;
     private float triggerThreshold = 0.9f;
     private CharacterController controller;
@@ -37,7 +37,30 @@ public float throwForce = 3f;
         
          if (Input.GetMouseButtonDown(0))
         {
-            TryInteract();
+            if (!TryInteract())
+            {
+                if (heldObject == null)
+                {
+                    TryPickUp();
+                
+
+
+                }
+                else
+                {
+                    DropObject();
+                }
+            }
+           
+        }
+
+       float triggerValue = Input.GetAxis("RightTrigger");
+    bool isPressed = triggerValue >= triggerThreshold;
+
+    if (isPressed && !wasTriggerPressedLastFrame)
+    {
+        if (!TryInteract())
+        {
             if (heldObject == null)
             {
                 TryPickUp();
@@ -51,21 +74,6 @@ public float throwForce = 3f;
             }
         }
 
-       float triggerValue = Input.GetAxis("RightTrigger");
-    bool isPressed = triggerValue >= triggerThreshold;
-
-    if (isPressed && !wasTriggerPressedLastFrame)
-    {
-        TryInteract();
-
-        if (heldObject == null)
-        {
-            TryPickUp();
-        }
-        else
-        {
-            DropObject();
-        }
     }
 
     wasTriggerPressedLastFrame = isPressed;
@@ -87,6 +95,7 @@ public float throwForce = 3f;
 
                 if (heldRigidbody != null)
                 {
+                    heldObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                     heldRigidbody.useGravity = false;
                     heldRigidbody.linearVelocity = Vector3.zero;
                     heldRigidbody.angularVelocity = Vector3.zero;
