@@ -364,6 +364,7 @@
 -r:"/run/media/deck/ED2S5/Unity/6000.1.8f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll"
 -r:"/run/media/deck/ED2S5/Unity/6000.1.8f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"/run/media/deck/ED2S5/Unity/6000.1.8f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll"
+-r:"/run/media/deck/ED2S5/Unity/6000.1.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
 -r:"Library/PackageCache/com.unity.burst@59eb6f11d242/Unity.Burst.Unsafe.dll"
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/UnityEngine.UI.ref.dll"
