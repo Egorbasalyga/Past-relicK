@@ -115,7 +115,7 @@ public float throwForce = 3f;
         heldRigidbody = null;
     }
 }
-     private void TryInteract()
+     private bool TryInteract()
     {
         
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
@@ -125,7 +125,15 @@ public float throwForce = 3f;
             if (interactable != null)
             {
                 interactable.Interact();
+                return true;
             }
+            else
+            {
+                return false;
+            }
+        } else
+        {
+            return false;
         }
     }
     private void Check()
@@ -140,12 +148,12 @@ public float throwForce = 3f;
         {
             Info.text = "Use";
         }
-        else
+        else if (heldObject == null)
         {
             Info.text = "";
         }
     }
-    else
+    else if(heldObject == null)
     {
         Info.text = "";
     }
