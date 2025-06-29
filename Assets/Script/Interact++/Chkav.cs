@@ -1,16 +1,10 @@
 using UnityEngine;
-
-public class Chkav : MonoBehaviour
+using System.Collections.Generic;
+public class Chkav : InteractParent
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Interact()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +21,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Marker/SuitMarker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -83,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751098552897</updated>
       <workItem from="1751098554086" duration="3777000" />
-      <workItem from="1751123354413" duration="3941000" />
+      <workItem from="1751123354413" duration="4357000" />
     </task>
     <servers />
   </component>
