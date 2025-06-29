@@ -22,6 +22,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/HideObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Marker/SuitMarker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -82,8 +83,17 @@
       <option name="presentableId" value="Default" />
       <updated>1751098552897</updated>
       <workItem from="1751098554086" duration="3777000" />
-      <workItem from="1751123354413" duration="4357000" />
+      <workItem from="1751123354413" duration="5045000" />
     </task>
+    <task id="LOCAL-00001" summary="Add interact chkav">
+      <option name="closed" value="true" />
+      <created>1751179467363</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751179467363</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +108,8 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add interact chkav" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add interact chkav" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
