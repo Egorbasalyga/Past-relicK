@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-public class test : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5;
     public float runSpeed = 10;
@@ -13,8 +13,8 @@ private bool wasTriggerPressedLastFrame = false;
 public Transform holdPosition;
     public float interactDistance = 3f;
 public float throwForce = 3f;
-    private GameObject heldObject;
-    private Rigidbody heldRigidbody;
+    public GameObject heldObject = null;
+    public Rigidbody heldRigidbody;
     private float triggerThreshold = 0.9f;
     private CharacterController controller;
     public TextMeshProUGUI Info;
@@ -34,10 +34,36 @@ public float throwForce = 3f;
         HandleLook();
         HandleMovement();
         Check();
-        
+        if (heldObject == null)
+        {
+            heldRigidbody = null;
+        }
          if (Input.GetMouseButtonDown(0))
         {
-            TryInteract();
+            if (!TryInteract())
+            {
+                if (heldObject == null)
+                {
+                    TryPickUp();
+                
+
+
+                }
+                else
+                {
+                    DropObject();
+                }
+            }
+           
+        }
+
+       float triggerValue = Input.GetAxis("RightTrigger");
+    bool isPressed = triggerValue >= triggerThreshold;
+
+    if (isPressed && !wasTriggerPressedLastFrame)
+    {
+        if (!TryInteract())
+        {
             if (heldObject == null)
             {
                 TryPickUp();
@@ -51,21 +77,6 @@ public float throwForce = 3f;
             }
         }
 
-       float triggerValue = Input.GetAxis("RightTrigger");
-    bool isPressed = triggerValue >= triggerThreshold;
-
-    if (isPressed && !wasTriggerPressedLastFrame)
-    {
-        TryInteract();
-
-        if (heldObject == null)
-        {
-            TryPickUp();
-        }
-        else
-        {
-            DropObject();
-        }
     }
 
     wasTriggerPressedLastFrame = isPressed;
@@ -87,6 +98,7 @@ public float throwForce = 3f;
 
                 if (heldRigidbody != null)
                 {
+                    heldObject.transform.localScale = heldObject.transform.localScale/4;
                     heldRigidbody.useGravity = false;
                     heldRigidbody.linearVelocity = Vector3.zero;
                     heldRigidbody.angularVelocity = Vector3.zero;
@@ -106,6 +118,7 @@ public float throwForce = 3f;
         heldObject.transform.SetParent(null);
         if (heldRigidbody != null)
         {
+			heldObject.transform.localScale = heldObject.transform.localScale*4;
             heldRigidbody.useGravity = true;
             heldRigidbody.freezeRotation = false;
             heldRigidbody.linearVelocity = playerCamera.forward * throwForce;
@@ -124,7 +137,9 @@ public float throwForce = 3f;
             InteractParent interactable = hit.collider.GetComponent<InteractParent>();
             if (interactable != null)
             {
+			
                 interactable.Interact();
+				
                 return true;
             }
             else
