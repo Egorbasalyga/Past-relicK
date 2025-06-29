@@ -95,7 +95,7 @@ public float throwForce = 3f;
 
                 if (heldRigidbody != null)
                 {
-                    heldObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    heldObject.transform.localScale = heldObject.transform.localScale/4;
                     heldRigidbody.useGravity = false;
                     heldRigidbody.linearVelocity = Vector3.zero;
                     heldRigidbody.angularVelocity = Vector3.zero;
@@ -115,6 +115,7 @@ public float throwForce = 3f;
         heldObject.transform.SetParent(null);
         if (heldRigidbody != null)
         {
+			heldObject.transform.localScale = heldObject.transform.localScale*4;
             heldRigidbody.useGravity = true;
             heldRigidbody.freezeRotation = false;
             heldRigidbody.linearVelocity = playerCamera.forward * throwForce;
@@ -133,7 +134,9 @@ public float throwForce = 3f;
             InteractParent interactable = hit.collider.GetComponent<InteractParent>();
             if (interactable != null)
             {
+				interactable.playerHeldItem = heldObject;
                 interactable.Interact();
+				interactable.playerHeldItem = null;
                 return true;
             }
             else
