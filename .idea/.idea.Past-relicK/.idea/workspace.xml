@@ -7,10 +7,10 @@
     <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +25,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/Chkav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Dialoge.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/HideObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Interact++/InteractParent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Marker/SuitMarker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/QuestSys/Chkav.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -62,10 +63,10 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3148">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="198">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3148" />
+      <option name="pid" value="198" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -91,6 +92,7 @@
       <workItem from="1751181583466" duration="770000" />
       <workItem from="1751182377200" duration="20000" />
       <workItem from="1751182482908" duration="1749000" />
+      <workItem from="1751187015098" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="Add interact chkav">
       <option name="closed" value="true" />

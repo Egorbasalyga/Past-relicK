@@ -11,6 +11,12 @@ public class Chkav : InteractParent
         if (l == 4)
         {               
             quest.NextQuest(1);
+            Dialoge dscript = GetComponent<Dialoge>();
+            if (dscript != null)
+            {
+                dscript.DStart(); 
+            }
+            Destroy(this);
         }
     }
     public override void Interact()

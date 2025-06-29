@@ -84,7 +84,7 @@ public class DialogTrigerSY : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         
-        if(other.CompareTag("Player")) 
+        if(other.CompareTag("Player") && !one) 
         {
             ind = true;
             StopAllCoroutines();
