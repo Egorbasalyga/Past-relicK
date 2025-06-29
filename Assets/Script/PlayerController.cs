@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-public class test : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5;
     public float runSpeed = 10;
@@ -13,8 +13,8 @@ private bool wasTriggerPressedLastFrame = false;
 public Transform holdPosition;
     public float interactDistance = 3f;
 public float throwForce = 3f;
-    private GameObject heldObject = null;
-    private Rigidbody heldRigidbody;
+    public GameObject heldObject = null;
+    public Rigidbody heldRigidbody;
     private float triggerThreshold = 0.9f;
     private CharacterController controller;
     public TextMeshProUGUI Info;
@@ -34,7 +34,10 @@ public float throwForce = 3f;
         HandleLook();
         HandleMovement();
         Check();
-        
+        if (heldObject == null)
+        {
+            heldRigidbody = null;
+        }
          if (Input.GetMouseButtonDown(0))
         {
             if (!TryInteract())
@@ -134,9 +137,9 @@ public float throwForce = 3f;
             InteractParent interactable = hit.collider.GetComponent<InteractParent>();
             if (interactable != null)
             {
-				interactable.playerHeldItem = heldObject;
+			
                 interactable.Interact();
-				interactable.playerHeldItem = null;
+				
                 return true;
             }
             else

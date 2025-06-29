@@ -2,18 +2,31 @@ using UnityEngine;
 using System.Collections.Generic;
 public class Chkav : InteractParent
 {
-    public override void Interact()
-    {
-        if (playerHeldItem != null)
-        {
-            SuitMarker luggage = playerHeldItem.GetComponent<SuitMarker>();
+    public GameObject player;
+    public Quest quest;
+    private int l = 0;
 
-            if (luggage != null &&
-                acceptedTypes.Contains(luggage.luggageType) 
-            {
-              Debug.Log("true");
-            }
+    void Update()
+    {
+        if (l == 4)
+        {               
+            quest.NextQuest(1);
         }
     }
-
+    public override void Interact()
+    {
+        PlayerController playerController = player.GetComponent<PlayerController>();
+        if (playerController.heldObject != null)
+        {
+            
+            if (playerController.heldObject.GetComponent<SuitMarker>() != null)
+            {
+                l++;
+                Destroy(playerController.heldObject);
+                playerController.heldObject = null;
+                playerController.heldRigidbody = null;
+            }
+            
+        }
+    }
 }

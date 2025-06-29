@@ -21,4 +21,12 @@ public List<string> quest;
             UrlText.text = quest[id];
         }
     }
+
+    public void NextQuest(int i)
+    {
+        if(i == id+1)
+        {
+            id++;
+        }
+    }
 }
