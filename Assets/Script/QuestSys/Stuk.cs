@@ -1,32 +1,13 @@
 using UnityEngine;
 
-public class Stuk : MonoBehaviour
+public class Stuk : InteractParent
 {
-    [SerializeField] private AudioClip soundClip; // Ссылка на аудиофайл
-    
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
-    void Start()
+    // Метод для проигрывания звука
+    public override void Interact()
     {
-    
-        audioSource = gameObject.AddComponent<AudioSource>();
-        
-
-        audioSource.playOnAwake = false;
-        audioSource.volume = 0.8f;
+        audioSource.Play();
     }
-
-    // Вызовите этот метод для проигрывания
-    public void PlaySoundOnce()
-    {
-        if (soundClip != null)
-        {
-            // Проигрывает звук ОДИН раз без привязки к источнику
-            audioSource.PlayOneShot(soundClip);
-        }
-        else
-        {
-            Debug.LogError("Sound clip is missing!");
-        }
-    }
+   
 }
