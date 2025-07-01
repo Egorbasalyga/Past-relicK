@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/QuestSys/Quest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/QuestSys/Stuk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/QuestSys/Stuk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Egor",
+    "git-widget-placeholder": "Nazazator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,15 +64,13 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="199">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="199" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
