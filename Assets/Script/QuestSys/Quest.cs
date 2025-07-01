@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class Quest : MonoBehaviour
 {
-int id = 0;
+public int id = 0;
 public TextMeshProUGUI UrlText;
 public List<string> quest;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
