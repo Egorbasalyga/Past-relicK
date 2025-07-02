@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+
 public abstract class DialogBase : MonoBehaviour
 {
     [System.Serializable]
@@ -10,12 +11,39 @@ public abstract class DialogBase : MonoBehaviour
         public string name;
         public string text;
     }
+
     protected PanelManage panelInstance;
     protected int currentLine;
     protected int maxLine;
     protected bool isActive = false;
     [SerializeField] protected List<Dialog> dialogs = new List<Dialog>();
     [SerializeField] protected float speed = 0.05f;
+
+    
+    protected PlayerController playerMovement;
+
+   
+    protected virtual void DisablePlayerMovement()
+    {
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false; 
+        }
+        else
+        {
+            Debug.LogWarning("PlayerMovement не найден! Убедитесь, что он назначен в инспекторе.");
+        }
+    }
+
+   
+    protected virtual void EnablePlayerMovement()
+    {
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true; 
+        }
+    }
+
     protected virtual void Update()
     {
         if (isActive && (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.JoystickButton0)))
@@ -31,6 +59,7 @@ public abstract class DialogBase : MonoBehaviour
             }
         }
     }
+
     protected void InitializeDialog()
     {
         panelInstance = PanelManage.instance;
@@ -41,7 +70,20 @@ public abstract class DialogBase : MonoBehaviour
         panelInstance.UrlName.text = dialogs[currentLine].name;
         StartCoroutine(TypeLine());
         isActive = true;
+
+        
+        GameObject player = GameObject.FindGameObjectWithTag("Player"); 
+        if (player != null)
+        {
+            playerMovement = player.GetComponent<PlayerController>();
+            DisablePlayerMovement();
+        }
+        else
+        {
+            Debug.LogError("Игрок с тегом 'Player' не найден на сцене!");
+        }
     }
+
     protected IEnumerator TypeLine()
     {
         panelInstance.UrlText.text = "";
@@ -51,6 +93,7 @@ public abstract class DialogBase : MonoBehaviour
             yield return new WaitForSeconds(speed);
         }
     }
+
     protected void NextLine()
     {
         currentLine++;
@@ -64,10 +107,14 @@ public abstract class DialogBase : MonoBehaviour
             FinishDialog();
         }
     }
+
     protected virtual void FinishDialog()
     {
         panelInstance.UrlName.text = "";
         panelInstance.HidePanel();
         isActive = false;
+
+       
+        EnablePlayerMovement();
     }
 }
