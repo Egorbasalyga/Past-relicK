@@ -16,6 +16,7 @@ public class Dialogwithnextquest : DialogBase
     protected override void FinishDialog()
     {
         base.FinishDialog();
+         Debug.Log("fdf");
         quest.NextQuest(questStage);
         Destroy(this);
     }
