@@ -2,17 +2,17 @@ using UnityEngine;
 using TMPro;
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float mouseSensitivity = 100f;
-	[SerializeField] private float gamepadSensitivity = 100f;
-	[SerializeField] private float verticalLookLimit = 80f;
-	[SerializeField] private Transform playerCamera;
-	public float walkSpeed = 5;
+    public float walkSpeed = 5;
     public float runSpeed = 10;
     public float gravity = -9;
-    private bool wasTriggerPressedLastFrame = false;
-	public Transform holdPosition;
+    [SerializeField] private float mouseSensitivity = 100f;
+[SerializeField] private float gamepadSensitivity = 100f;
+[SerializeField] private float verticalLookLimit = 80f;
+[SerializeField] private Transform playerCamera;
+private bool wasTriggerPressedLastFrame = false;
+public Transform holdPosition;
     public float interactDistance = 3f;
-	public float throwForce = 3f;
+public float throwForce = 3f;
     public GameObject heldObject = null;
     public Rigidbody heldRigidbody;
     private float triggerThreshold = 0.9f;
@@ -111,21 +111,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   void DropObject() 
-	{
-   		if (heldObject != null) {
-        	heldObject.transform.SetParent(null);
-      	 	if (heldRigidbody != null)
-      	    {
-				heldObject.transform.localScale = heldObject.transform.localScale*4;
-      	        heldRigidbody.useGravity = true;
-      	        heldRigidbody.freezeRotation = false;
-       	        heldRigidbody.linearVelocity = playerCamera.forward * throwForce;
-    		}
-       	 	heldObject = null;
-       	 	heldRigidbody = null;
-   		 }
-	}
+   void DropObject()
+{
+    if (heldObject != null)
+    {
+        heldObject.transform.SetParent(null);
+        if (heldRigidbody != null)
+        {
+			heldObject.transform.localScale = heldObject.transform.localScale*4;
+            heldRigidbody.useGravity = true;
+            heldRigidbody.freezeRotation = false;
+            heldRigidbody.linearVelocity = playerCamera.forward * throwForce;
+        }
+
+        heldObject = null;
+        heldRigidbody = null;
+    }
+}
      private bool TryInteract()
     {
         

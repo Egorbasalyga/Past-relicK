@@ -14,7 +14,7 @@ public class Chkav : InteractParent
             Dialoge dscript = GetComponent<Dialoge>();
             if (dscript != null)
             {
-                dscript.StartDialog(); 
+                dscript.DStart(); 
             }
             Destroy(this);
         }
