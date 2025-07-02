@@ -20,6 +20,7 @@ public class DialogTriggerSY : DialogBase
                 StopAllCoroutines();
                 panelInstance.HidePanel();
                 isActive = false;
+                DialogBase.isDialogActive = false; // Also set the static flag
             }
         }
     }

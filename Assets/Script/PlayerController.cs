@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour
 
    void Update()
     {
-        HandleLook();
-        HandleMovement();
+        if (!DialogBase.isDialogActive)
+        {
+            HandleLook();
+            HandleMovement();
+        }
         Check();
         if (heldObject == null)
         {

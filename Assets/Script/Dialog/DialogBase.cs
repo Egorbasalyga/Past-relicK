@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 public abstract class DialogBase : MonoBehaviour
 {
+    public static bool isDialogActive = false;
+
     [System.Serializable]
     public class Dialog
     {
@@ -41,6 +43,7 @@ public abstract class DialogBase : MonoBehaviour
         panelInstance.UrlName.text = dialogs[currentLine].name;
         StartCoroutine(TypeLine());
         isActive = true;
+        isDialogActive = true;
     }
     protected IEnumerator TypeLine()
     {
@@ -69,5 +72,6 @@ public abstract class DialogBase : MonoBehaviour
         panelInstance.UrlName.text = "";
         panelInstance.HidePanel();
         isActive = false;
+        isDialogActive = false;
     }
 }
