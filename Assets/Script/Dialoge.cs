@@ -2,63 +2,17 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-public class Dialoge : MonoBehaviour
+public class Dialoge : DialogBase
 {
-    private PanelManage instancR;
-    public List<Dialog> DialogTN;
-    public float Speed;
-    private bool ind = false;
-    private int lastline;
-    private int maxline;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   
+    public void StartDialog()
     {
-        
+        if (!isActive) InitializeDialog();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FinishDialog()
     {
-        if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.JoystickButton0)) && ind){
-                if(instancR.UrlText.text == DialogTN[lastline].text){
-                NextLine();
-            }else{
-                StopAllCoroutines();
-                instancR.UrlText.text = DialogTN[lastline].text;
-            }
-        }
-    }
-    void NextLine(){
-        instancR.UrlText.text = "";
-        if(lastline < maxline){
-            lastline++;
-            instancR.UrlName.text = DialogTN[lastline].name;
-            StartCoroutine(TLine());
-        }else{
-            
-            instancR.UrlName.text = "";
-            instancR.HidePanel();
-            Destroy(this);
-        }
-         
-       
-    }
-    IEnumerator TLine(){
-        foreach(char c in DialogTN[lastline].text.ToCharArray()){
-            instancR.UrlText.text += c;
-            yield return new WaitForSeconds(Speed);
-        }
-    }
-    public void DStart()
-    {
-        ind = true;
-            instancR = PanelManage.instance;
-            instancR.ShowPanel();
-            maxline = DialogTN.Count - 1;
-            instancR.UrlText.text = "";
-            lastline = 0;
-            instancR.UrlName.text = DialogTN[lastline].name;
-            StartCoroutine(TLine());
-        
+        base.FinishDialog();
+        Destroy(this);
     }
 }
