@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private float rotationX = 0f;
     public bool nond = true;
-
+    public bool Rcam = true;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -181,18 +181,25 @@ public class PlayerController : MonoBehaviour
     float lookY = 0f;
 
     bool isGamepadActive = Mathf.Abs(Input.GetAxis("RightStickHorizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("RightStickVertical")) > 0.1f;
-
-    if (isGamepadActive)
+    if (Rcam)
     {
-        // Управление с геймпада
-        lookX = Input.GetAxis("RightStickHorizontal") * gamepadSensitivity * Time.deltaTime;
-        lookY = Input.GetAxis("RightStickVertical") * gamepadSensitivity * Time.deltaTime;
+        if (isGamepadActive)
+        {
+            // Управление с геймпада
+            lookX = Input.GetAxis("RightStickHorizontal") * gamepadSensitivity * Time.deltaTime;
+            lookY = Input.GetAxis("RightStickVertical") * gamepadSensitivity * Time.deltaTime;
+        }
+        else
+        {
+            // Управление с мыши
+            lookX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            lookY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        }
     }
     else
     {
-        // Управление с мыши
-        lookX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        lookY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        lookX = 0;
+        lookY = 0;
     }
 
     rotationX -= lookY;
