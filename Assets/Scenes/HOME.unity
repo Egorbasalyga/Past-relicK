@@ -4868,6 +4868,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5512852344633629503}
     - target: {fileID: 6186460652421129148, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      propertyPath: m_Mass
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186460652421129148, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
@@ -11469,6 +11473,7 @@ GameObject:
   - component: {fileID: 2417678152783669565}
   - component: {fileID: 3775945801784707856}
   - component: {fileID: 8259237814780220033}
+  - component: {fileID: 8259237814780220034}
   m_Layer: 0
   m_Name: Babka
   m_TagString: Untagged
@@ -12143,6 +12148,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8259237814780220034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057316915654144128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01746713, y: 0.025319487, z: 0.091626056}
+  m_Center: {x: -0.0024923836, y: -0.00039631492, z: -0.0061761327}
 --- !u!1 &8267141034233686763
 GameObject:
   m_ObjectHideFlags: 0
