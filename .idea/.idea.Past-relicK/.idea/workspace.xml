@@ -7,17 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Audio.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Audio/ravnomerno-povtoryayuschiysya-stuk-v-dver.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Audio/ravnomerno-povtoryayuschiysya-stuk-v-dver.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DialogTrigerSY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Dialoge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Dialoge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Dialogwithnextquest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Dialogwithnextquest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/QuestSys/Chkav.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/QuestSys/Chkav.cs" afterDir="false" />
-    </list>
+    <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "do_not_show_solution_notification": "true",
-    "git-widget-placeholder": "Egor",
+    "git-widget-placeholder": "Selox",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
