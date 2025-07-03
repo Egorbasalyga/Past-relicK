@@ -9,4 +9,9 @@ public class levelcontroller : MonoBehaviour
 	{
 		SceneManager.LoadScene(numberScenes);
 	}
+	public void OnClickExit()
+	{
+		Debug.Log("Exit");
+		Application.Quit();
+	}
 }

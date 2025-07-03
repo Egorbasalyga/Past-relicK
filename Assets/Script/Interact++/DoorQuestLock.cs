@@ -1,20 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Stuk : InteractParent
+public class DoorQuestLock : InteractParent
 {
-    public AudioSource audioSource;
-    public Quaternion openRotation;
-    public Image lio;
     public Quest quest;
+    private Quaternion openRotation;
     private bool isOpening = false;
+    public int questnum;
     private float rotationProgress = 0f;
     private Quaternion startRotation;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         openRotation = Quaternion.Euler(transform.parent.eulerAngles + Vector3.up * 90);
-        lio.gameObject.SetActive(false);
+        
     }
 
     void Update()
@@ -32,7 +30,6 @@ public class Stuk : InteractParent
           
             if (rotationProgress >= 1f)
             {
-                lio.gameObject.SetActive(false);
                 Destroy(this);
             }
         }
@@ -41,11 +38,9 @@ public class Stuk : InteractParent
     public override void Interact()
     {
      
-        if (isOpening || quest.id != 1) return;
-        
-        audioSource.Play();
-        lio.gameObject.SetActive(true);
-        
+        if (isOpening || quest.id != questnum) return;
+        quest.NextQuest(1);
+
       
         startRotation = transform.parent.rotation;
         isOpening = true;
