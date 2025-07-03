@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float verticalLookLimit = 80f;
 	[SerializeField] private Transform playerCamera;
 	public float walkSpeed = 5;
-    public float runSpeed = 10;
+
     public float gravity = -9;
     private bool wasTriggerPressedLastFrame = false;
 	public Transform holdPosition;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI Info;
     private Vector3 velocity;
     private float rotationX = 0f;
+    public bool nond = true;
 
     void Start()
     {
@@ -27,13 +28,15 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
-
+    
    void Update()
     {
-        HandleLook();
-        HandleMovement();
-        Check();
+       
+            HandleLook();
+            HandleMovement();
+            Check();
+       
+        
         if (heldObject == null)
         {
             heldRigidbody = null;
@@ -208,10 +211,18 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = -2f;
         }
-
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x;
+        float z;
+        float currentSpeed = walkSpeed;
+        if(nond){
+            x = Input.GetAxis("Horizontal");
+            z = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            x = 0;
+            z = 0;
+        }
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * currentSpeed * Time.deltaTime);
