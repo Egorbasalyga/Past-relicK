@@ -8,7 +8,7 @@ public class Dialogwithnextquest : DialogBase
     [SerializeField] private int questStage;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isActive)
+        if (other.CompareTag("Player") && !isActive && quest.id == questStage-1)
         {
             InitializeDialog();
         }
@@ -16,7 +16,6 @@ public class Dialogwithnextquest : DialogBase
     protected override void FinishDialog()
     {
         base.FinishDialog();
-         Debug.Log("fdf");
         quest.NextQuest(questStage);
         Destroy(this);
     }
