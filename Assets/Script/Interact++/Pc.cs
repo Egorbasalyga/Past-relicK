@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public class Pc : InteractParent
 {
     public Quest quest;
+    public AudioSource audioSource;
     public PlayerController player;
     public Canvas lio;
     public Collider box;
@@ -21,6 +22,7 @@ public class Pc : InteractParent
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         quest.NextQuest(1);
+        audioSource.Play();
         Destroy(this);
     }
     public override void Interact()
