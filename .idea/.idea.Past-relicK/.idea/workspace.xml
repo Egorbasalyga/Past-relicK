@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Past-relicK/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HOME.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Dialog/DialogBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Dialog/DialogBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-    </list>
+    <list default="true" id="74f39331-37e0-4135-bd43-0e8606949165" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +102,7 @@
       <workItem from="1751286088370" duration="1160000" />
       <workItem from="1751351185125" duration="5602000" />
       <workItem from="1751370736928" duration="3147000" />
-      <workItem from="1751525488397" duration="2262000" />
+      <workItem from="1751525488397" duration="2869000" />
     </task>
     <task id="LOCAL-00001" summary="Add interact chkav">
       <option name="closed" value="true" />
