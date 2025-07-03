@@ -38,6 +38,7 @@ public abstract class DialogBase : MonoBehaviour
    
     protected virtual void EnablePlayerMovement()
     {
+        
         if (playerMovement != null)
         {
             playerMovement.enabled = true; 
