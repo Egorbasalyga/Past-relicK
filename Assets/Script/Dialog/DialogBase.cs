@@ -27,10 +27,12 @@ public abstract class DialogBase : MonoBehaviour
     {
         if (playerMovement != null)
         {
-            playerMovement.nond = false;
-
+            playerMovement.enabled = false; 
         }
-       
+        else
+        {
+            Debug.LogWarning("PlayerMovement не найден! Убедитесь, что он назначен в инспекторе.");
+        }
     }
 
    
@@ -39,7 +41,7 @@ public abstract class DialogBase : MonoBehaviour
         
         if (playerMovement != null)
         {
-            playerMovement.nond = true; 
+            playerMovement.enabled = true; 
         }
     }
 
@@ -77,7 +79,10 @@ public abstract class DialogBase : MonoBehaviour
             playerMovement = player.GetComponent<PlayerController>();
             DisablePlayerMovement();
         }
-       
+        else
+        {
+            Debug.LogError("Игрок с тегом 'Player' не найден на сцене!");
+        }
     }
 
     protected IEnumerator TypeLine()
