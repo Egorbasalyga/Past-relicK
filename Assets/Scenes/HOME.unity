@@ -4180,6 +4180,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05000003, y: 0.07000001, z: 0.015000015}
   m_Center: {x: -0.08500005, y: 0.02500001, z: -0.0024999895}
+--- !u!1 &1328240411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 366847436714540305, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+  m_PrefabInstance: {fileID: 1679164638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1328240416 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4708319742258178962, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+  m_PrefabInstance: {fileID: 1679164638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &1328240418
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328240411}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: a1deb2d73ccd2fb4097e937f7b608d56, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 1328240416}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 4
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 0
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &1357559210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4807,6 +4853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1348081163220902028, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2916814895318382751, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.57574
@@ -4898,6 +4948,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1295145510616368475, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1909426778}
+    - targetCorrespondingSourceObject: {fileID: 366847436714540305, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1328240418}
   m_SourcePrefab: {fileID: 100100000, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
 --- !u!1 &1716926458
 GameObject:
