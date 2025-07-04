@@ -4804,6 +4804,14 @@ PrefabInstance:
       propertyPath: Info
       value: 
       objectReference: {fileID: 5512852344633629503}
+    - target: {fileID: 5544411012797911955, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      propertyPath: walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544411012797911955, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      propertyPath: gamepadSensitivity
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6186460652421129148, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
       propertyPath: m_UseGravity
       value: 1

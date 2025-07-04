@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class levelcontroller : MonoBehaviour
 {
+	void Start()
+	{
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
 	public void ChangeScenes(int numberScenes)
 	{
 		SceneManager.LoadScene(numberScenes);
