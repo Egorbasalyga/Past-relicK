@@ -9518,6 +9518,30 @@ PrefabInstance:
       propertyPath: quest
       value: 
       objectReference: {fileID: 1909426778}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: nextscen
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: dialogs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: dialogs.Array.data[0].name
+      value: dfsfd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: dialogs.Array.data[0].text
+      value: fsfsgfdb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: dialogs.Array.data[1].name
+      value: sdf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631390428935846652, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
+      propertyPath: dialogs.Array.data[1].text
+      value: sfdfsfd
+      objectReference: {fileID: 0}
     - target: {fileID: 5057976119912591468, guid: b997d732b4f2f9e46a5a3258be434a2d, type: 3}
       propertyPath: m_Name
       value: Trigerblack
