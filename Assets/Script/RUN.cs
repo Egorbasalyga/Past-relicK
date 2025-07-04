@@ -40,7 +40,6 @@ public class RUN : MonoBehaviour
         isActive = true;
         isWaiting = false;
         
-        // Устанавливаем начальную позицию и поворот
         transform.position = waypoints[0].waypoint.position;
         ApplyWaypointRotation(waypoints[0].waypoint);
     }
@@ -60,13 +59,13 @@ public class RUN : MonoBehaviour
         Transform targetWaypoint = waypoints[currentWaypointIndex].waypoint;
         Vector3 direction = targetWaypoint.position - transform.position;
         
-        // Поворот только если движемся к точке
+        
         if (direction.magnitude > stoppingDistance)
         {
             RotateTowardsTarget(targetWaypoint, direction);
         }
 
-        // Перемещение к точке
+        
         float distance = direction.magnitude;
         if (distance > stoppingDistance)
         {
@@ -94,12 +93,12 @@ public class RUN : MonoBehaviour
         
         if (useWaypointRotation)
         {
-            // Используем поворот самой точки
+       
             targetRotation = target.rotation * Quaternion.Euler(rotationOffset);
         }
         else
         {
-            // Поворот по направлению движения
+            
             targetRotation = Quaternion.LookRotation(direction) * Quaternion.Euler(rotationOffset);
         }
 
@@ -126,7 +125,7 @@ public class RUN : MonoBehaviour
         currentWaypointIndex++;
         isWaiting = false;
         
-        // Применяем поворот следующей точки при необходимости
+       
         if (currentWaypointIndex < waypoints.Count)
         {
             ApplyWaypointRotation(waypoints[currentWaypointIndex].waypoint);
