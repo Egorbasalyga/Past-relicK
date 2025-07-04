@@ -61,7 +61,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.047
+    m_Value: 0.45
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
@@ -83,10 +83,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -10
   tint:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 45
 --- !u!114 &-3113075594743873423
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -127,13 +127,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.00000019339856}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.6547316}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
 --- !u!114 &-1558939169183216348
 MonoBehaviour:
   m_ObjectHideFlags: 3
