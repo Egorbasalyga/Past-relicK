@@ -7,6 +7,6 @@ public class Teleport : InteractParent
     public override void Interact()
     {
         player.transform.position = waypoint.position;
-        Destroy(this);
+        
     }
 }
