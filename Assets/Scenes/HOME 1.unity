@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb55c220d5e88b1538cfbe5d8963d360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextscen: 0
+  nextscen: 3
 --- !u!65 &230494569
 BoxCollider:
   m_ObjectHideFlags: 0
