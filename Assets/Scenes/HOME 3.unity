@@ -5530,6 +5530,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 1135916842688176456, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295145510616368475, guid: 1875355585a068ec5b140d8b3ff8faac, type: 3}
       propertyPath: m_Name
       value: Player
@@ -11721,7 +11725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6516681441110128907
 Transform:
   m_ObjectHideFlags: 0
